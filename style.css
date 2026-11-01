@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: linear-gradient(180deg, #123d32, #286044, #102f29);
+    color: white;
+    min-height: 100vh;
+}
+
+/* تنظیم مشترک صفحه‌ها */
+.welcome-screen,
+.mission-screen,
+.question-screen,
+.result-screen {
+    width: 100%;
+    max-width: 520px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+/* صفحه خوشامدگویی */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.game-header p {
+    color: #f5d77b;
+    font-size: 14px;
+}
+
+.game-header h1 {
+    color: #ffe49a;
+    font-size: 27px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    background: linear-gradient(145deg, #427b50, #183e32);
+    border: 3px solid #d5aa4c;
+    border-radius: 25px;
+    padding: 35px 10px;
+    font-size: 85px;
+    box-shadow: 0 8px 20px #071e18;
+}
+
+.magic-icons {
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.hero h2 {
+    color: #ffe49a;
+    font-size: 23px;
+}
+
+.intro {
+    color: #e0eadc;
+    font-size: 15px;
+    line-height: 2.2;
+}
+
+.start-section button,
+.mission-screen button,
+#nextQuestionButton {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+    padding: 16px;
+    background: linear-gradient(135deg, #ffe49a, #d39a31);
+    color: #253c2c;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 0 #966b24;
+}
+
+.start-section button:active,
+.mission-screen button:active,
+#nextQuestionButton:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 #966b24;
+}
+
+.start-section p {
+    color: #e7d49b;
+    font-size: 13px;
+    margin-top: 22px;
+}
+
+.teacher-info {
+    border-top: 1px solid #b99b58;
+    padding-top: 15px;
+    color: #f5dfaa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.teacher-info p {
+    margin: 5px;
+}
+
+/* صفحه معرفی مأموریت */
+.mission-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.mission-icon {
+    font-size: 55px;
+}
+
+.mission-screen h1 {
+    color: #ffe49a;
+    font-size: 26px;
+    line-height: 1.8;
+}
+
+.mission-screen h2 {
+    color: #f5d77b;
+    font-size: 21px;
+}
+
+.mission-screen section {
+    background: #24513d;
+    border: 1px solid #b99b58;
+    border-radius: 20px;
+    padding: 20px 15px;
+    box-shadow: 0 6px 15px #0b281f;
+}
+
+.mission-screen section p {
+    color: #e5efdf;
+    font-size: 14px;
+    line-height: 2.2;
+    margin: 7px 0;
+}
+
+/* صفحه سؤال‌ها */
+.question-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.question-header {
+    color: #f8d878;
+}
+
+.question-header h1 {
+    font-size: 25px;
+    margin: 5px 0 18px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.progress-info strong {
+    color: #ffe49a;
+}
+
+.progress-track {
+    height: 13px;
+    background: #0b281f;
+    border: 1px solid #b99b58;
+    border-radius: 20px;
+    overflow: hidden;
+    direction: ltr;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #d39a31, #ffe49a);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.question-card {
+    background: #fff8e7;
+    color: #254b36;
+    padding: 25px 15px;
+    border-radius: 20px;
+    border: 3px solid #e7bd55;
+    box-shadow: 0 6px 15px #0b281f;
+}
+
+.question-number-icon {
+    font-size: 30px;
+}
+
+.question-card h2 {
+    font-size: 20px;
+    margin: 12px 0 22px;
+}
+
+.fraction-question {
+    font-size: 32px;
+    font-weight: bold;
+    direction: ltr;
+    color: #244b35;
+    word-spacing: 15px;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-options button {
+    background: #e5f1df;
+    color: #254b36;
+    border: 2px solid #8caf80;
+    border-radius: 14px;
+    padding: 15px 10px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.answer-options button:active {
+    transform: scale(0.98);
+}
+
+.answer-options button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+.feedback-box {
+    background: #24513d;
+    border: 1px solid #b99b58;
+    border-radius: 15px;
+    padding: 12px;
+    color: #fff8e7;
+    font-size: 14px;
+    line-height: 2;
+    min-height: 12px;
+}
+
+#nextQuestionButton {
+    margin-top: 2px;
+}
+
+/* صفحه نتیجه */
+.result-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    color: #fff8e7;
+}
+
+.result-icon {
+    font-size: 75px;
+}
+
+.result-screen h1 {
+    color: #f8d878;
+    font-size: 29px;
+    margin: 0;
+}
+
+.result-screen h2 {
+    font-size: 22px;
+    color: #ffe49a;
+}
+
+.final-score {
+    background: #fff8e7;
+    color: #254b36;
+    border: 4px solid #e7bd55;
+    border-radius: 20px;
+    padding: 20px 35px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.result-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 10px;
+}
+
+.result-buttons button {
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #f8d878;
+    color: #254b36;
+}
+
+.result-buttons button:last-child {
+    background: #fff8e7;
+    color: #254b36;
+}
+
+#exitMessage {
+    color: #f8d878;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.result-screen .teacher-info {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* نمایشگرهای کوچک */
+@media (max-width: 360px) {
+    .game-header h1 {
+        font-size: 23px;
+    }
+
+    .hero-image {
+        font-size: 65px;
+        padding: 25px 10px;
+    }
+
+    .fraction-question {
+        font-size: 27px;
+    }
+
+    .question-card h2 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#123d32">
+    <title>مأموریت سرزمین کسرها</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- صفحه خوشامدگویی -->
+    <main class="welcome-screen" id="welcomeScreen">
+        <header class="game-header">
+            <p>سرزمین اسرارآمیز ریاضی</p>
+            <h1>مأموریت سرزمین کسرها</h1>
+        </header>
+
+        <section class="hero">
+            <div class="hero-image">
+                🧒🏻🎒
+                <div class="magic-icons">✨ 🏰 ✨</div>
+            </div>
+
+            <h2>آماده‌ای قهرمان شوی؟</h2>
+            <p class="intro">
+                ۱۰ معمای ریاضی در انتظار توست.
+                باهوش باش و گنج سرزمین کسرها را پیدا کن!
+            </p>
+        </section>
+
+        <section class="start-section">
+            <button id="startButton">شروع مأموریت 🚀</button>
+            <p>۱۰ سؤال • ۳ سرزمین • یک قهرمان</p>
+        </section>
+
+        <footer class="teacher-info">
+            <p>آموزگار پایه ششم: آقای حسن‌پور</p>
+            <p dir="ltr">@Hassanpour365</p>
+        </footer>
+    </main>
+
+    <!-- صفحه معرفی مأموریت -->
+    <main class="mission-screen" id="missionScreen" hidden>
+        <header>
+            <div class="mission-icon">🗺️✨</div>
+            <h1>دروازه سرزمین کسرها</h1>
+        </header>
+
+        <section>
+            <h2>ماجراجویی تو آغاز می‌شود!</h2>
+            <p>
+                سه سرزمین اسرارآمیز در انتظار تو هستند.
+                برای پیدا کردن گنج، باید به ۱۰ سؤال
+                درباره مقایسه کسرها پاسخ بدهی.
+            </p>
+        </section>
+
+        <section>
+            <h2>قوانین مأموریت</h2>
+            <p>پاسخ درست در تلاش اول: ۱۰ امتیاز</p>
+            <p>پاسخ درست در تلاش دوم: ۵ امتیاز</p>
+            <p>دو پاسخ اشتباه: بدون امتیاز، همراه با آموزش</p>
+            <p>بیشترین امتیاز: ۱۰۰</p>
+        </section>
+
+        <button id="enterGameButton">ورود به سرزمین کسرها 🚀</button>
+    </main>
+
+    <!-- صفحه سؤال‌ها -->
+    <main class="question-screen" id="questionScreen" hidden>
+
+        <header class="question-header">
+            <h1 id="stageTitle">🌳 جنگل کسرها</h1>
+
+            <div class="progress-info">
+                <span>سؤال <strong id="questionNumber">۱</strong> از ۱۰</span>
+                <span>امتیاز: <strong id="currentScore">۰</strong></span>
+            </div>
+
+            <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="پیشرفت بازی"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                aria-valuenow="0"
+                id="progressTrack"
+            >
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </header>
+
+        <section class="question-card">
+            <div class="question-number-icon">❓</div>
+            <h2>کدام کسر بزرگ‌تر است؟</h2>
+            <div class="fraction-question" id="fractionQuestion">
+                ۳/۸　　۵/۸
+            </div>
+        </section>
+
+        <section
+            class="answer-options"
+            id="answerOptions"
+            aria-label="گزینه‌های پاسخ"
+        >
+        </section>
+
+        <div class="feedback-box" id="feedback" aria-live="polite"></div>
+
+        <button id="nextQuestionButton" hidden>
+            سؤال بعدی ➜
+        </button>
+
+    </main>
+
+    <!-- صفحه نتیجه -->
+    <main class="result-screen" id="resultScreen" hidden>
+
+        <div class="result-icon">🏆✨</div>
+
+        <h1>پایان مأموریت!</h1>
+        <h2 id="finalTitle">قهرمان سرزمین کسرها</h2>
+
+        <p>امتیاز نهایی تو:</p>
+
+        <div class="final-score">
+            <span id="finalScore">۰</span>
+            <span>از ۱۰۰</span>
+        </div>
+
+        <p id="finalMessage">
+            آفرین! تو یک ماجراجوی شجاع هستی.
+        </p>
+
+        <div class="result-buttons">
+            <button id="replayButton">🔄 بازی دوباره</button>
+            <button id="exitButton">👋 پایان بازی</button>
+        </div>
+
+        <p id="exitMessage" hidden>
+            ممنون از همراهی تو، ماجراجوی دانا! 🌟
+            <br>
+            حالا می‌توانی صفحه بازی را ببندی.
+        </p>
+
+        <footer class="teacher-info">
+            <p>آموزگار پایه ششم: آقای حسن‌پور</p>
+            <p dir="ltr">@Hassanpour365</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
